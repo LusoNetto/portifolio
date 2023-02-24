@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+body {
+    padding: 40px;
+    display: flex;
+    justify-content:space-between;
+    background-color: #22212c;
+}
+#sideBar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#profileContainer {
+    background-color: #302F3D;
+    width: 348px;
+    height: 292px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    border-radius: 20px;
+}
+#avatar {
+    width: 128px;
+    height: 128px;
+    border-radius: 100%;
+    border: 2px solid #00FF00;
+    margin: 30px
+}
+#infoProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#name {
+    margin-bottom: 10px;    
+    font-weight: 700;
+    font-size: 23px;
+    color: #837E9F
+}
+#cargo {
+    color: #837E9F;    
+    font-weight: 300;
+    font-size: 13px;
+}
+#contatosContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #302F3D;
+    width: 348px;    
+    height: auto;    
+    border-radius: 20px;
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.infosContato {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.textoContato {
+    font-weight: 400;
+    font-size: 13px;
+    color: #837E9F;
+}
+#tecnologiasContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #302F3D;
+    width: 348px;    
+    height: auto;    
+    border-radius: 20px;
+    padding: 30px 30px 30px 20px
+}
+#tituloTecnologias {
+    font-weight: 700;
+    font-size: 20px;
+    color: #837E9F;
+}
+#tecnologias {
+    padding-left: 10px;
+    display: grid;
+    grid-template-areas: "1 2 3";
+    justify-content: center;
+    gap: 15px;
+}
+.tecnologia {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    width: 86px;
+    height: 24px;
+    border-radius: 30px;
+    background-color: #CB92B1;
+    color: #000000;    
+    font-weight: 700;
+    font-size: 10px;
+}
+#experienciasContainer {
+    background-color: #302F3D;
+    width: 348px;    
+    height: 292px;    
+    border-radius: 20px;
+}
+#educacaoContainer {
+    background-color: #302F3D;
+    width: 348px;    
+    height: 292px;    
+    border-radius: 20px;
+}
