@@ -104,10 +104,40 @@ body {
     font-size: 10px;
 }
 #experienciasContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: #302F3D;
     width: 348px;    
-    height: 292px;    
+    height: auto;    
     border-radius: 20px;
+    padding: 30px 20px;
+}
+#experiencias {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-left: 10px;
+}
+#titleExperiencias {
+    font-weight: 700;
+    font-size: 20px;
+    color: #837E9F;
+}
+.titleExperiencia {
+    font-weight: 700;
+    font-size: 14px;    
+    color: #837E9F;
+}
+.dataExperiencia {
+    font-weight: 300;
+    font-size: 12px;    
+    color: #837E9F;
+}
+.cargoExperiencia {
+    font-weight: 400;
+    font-size: 12px;    
+    color: #837E9F;
 }
 #educacaoContainer {
     background-color: #302F3D;
