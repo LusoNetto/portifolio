@@ -176,6 +176,9 @@ body {
     color: #837E9F;
 }
 #conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     width: 100%;
 }
 #myProjectsContainer {
@@ -186,9 +189,78 @@ body {
     background-color: #302F3D;
     border-radius: 20px;
 }
-#myProjectsTitle{
-
+#myProjectsTitle {
+    font-weight: 700;
+    font-size: 20px;
+    color: #837E9F;
+}
+#myProjectsVerTodos {
+    font-weight: 400;
+    font-size: 14px;
+    color: #837E9F;
 }
 #myProjectsVerTodos{
     text-decoration: none;
+}
+#projectContainer{
+    display: flex;
+    gap: 30px;
+}
+.projectBox {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    height: 186px;
+    width: 50%;
+    background-color: #302F3D;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+.projectTitle {
+    display: flex;
+    gap: 16px;
+}
+.projectName {
+    font-weight: 700;
+    font-size: 16px;
+    color: #837E9F;
+}
+.projectDescricao {
+    font-weight: 400;
+    font-size: 14px;
+    color: #837E9F;
+}
+.projectInformacoes {
+    display: flex;
+    justify-content: space-between;
+}
+.projectStarsAndCommits {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.projectStarsContent {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.projectStarsNumber {
+    font-weight: 400;
+    font-size: 14px;
+    color: #837E9F;
+}
+.projectCommitsContent {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.projectCommitsNumber {
+    font-weight: 400;
+    font-size: 14px;
+    color: #837E9F;
+}
+.projectLanguageContent {
+    display: flex;    
+    gap: 8px;
+    align-items: center;
 }
