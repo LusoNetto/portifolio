@@ -6,8 +6,8 @@
 body {
     padding: 40px;
     display: flex;
-    justify-content:space-between;
     background-color: #22212c;
+    gap: 60px;
 }
 #sideBar {
     display: flex;
@@ -140,8 +140,55 @@ body {
     color: #837E9F;
 }
 #educacaoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: #302F3D;
     width: 348px;    
-    height: 292px;    
+    height: auto;    
     border-radius: 20px;
+    padding: 30px 20px;
+}
+#educacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-left: 10px;
+}
+#titleEducacoes {
+    font-weight: 700;
+    font-size: 20px;
+    color: #837E9F;
+}
+.titleEducacao {
+    font-weight: 700;
+    font-size: 14px;    
+    color: #837E9F;
+}
+.dataEducacao {
+    font-weight: 300;
+    font-size: 12px;    
+    color: #837E9F;
+}
+.areaEducacao {
+    font-weight: 400;
+    font-size: 12px;    
+    color: #837E9F;
+}
+#conteudo {
+    width: 100%;
+}
+#myProjectsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #302F3D;
+    border-radius: 20px;
+}
+#myProjectsTitle{
+
+}
+#myProjectsVerTodos{
+    text-decoration: none;
 }
