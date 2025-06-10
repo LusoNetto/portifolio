@@ -13,7 +13,7 @@ const ProjectsSection: React.FC = () => {
         {
             title: "Ecommerce PHP",
             subtitle: "Janeiro 2025 - Fevereiro 2025",
-            srcImg: "/src/assets/images/ecommerce-php.png",
+            srcImg: "/assets/ecommerce-php.png",
             description: "Nos último meses estive trabalhando nesse ecommerce em PHP (Wordpress - Woocommerce)",
             technologies: "Technologies: JavaScript, HTML, CSS, PHP",
             websiteURL: "https://lusoeletronicos.com.br",
@@ -22,7 +22,7 @@ const ProjectsSection: React.FC = () => {
         {
             title: "Labirinto",
             subtitle: "Jul 2019 - May 2019",
-            srcImg: "/src/assets/images/project1-craze-maze.gif",
+            srcImg: "/assets/project1-craze-maze.gif",
             description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game",
             technologies: "Technologies: JavaScript, HTML, CSS, Canvas Graphics",
             websiteURL: "https://adrianasaty.github.io/ironhack-project1-craze-maze/index.html",
@@ -31,7 +31,7 @@ const ProjectsSection: React.FC = () => {
         {
             title: "Project Blotting",
             subtitle: "Jul 2019 - May 2019",
-            srcImg: "/src/assets/images/project2-blotting.png",
+            srcImg: "/assets/project2-blotting.png",
             description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game",
             technologies: "Technologies: JavaScript, HTML, CSS, Canvas Graphics",
             websiteURL: "https://adrianasaty.github.io/ironhack-project1-craze-maze/index.html",
