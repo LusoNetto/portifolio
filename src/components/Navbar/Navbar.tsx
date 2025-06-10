@@ -86,6 +86,9 @@ export default function Navbar() {
                         <MenuItem onClick={() => handleSmoothScroll("projects")}>
                             <StyledNavLink>Projetos</StyledNavLink>
                         </MenuItem>
+                        <MenuItem onClick={() => handleSmoothScroll("certifications")}>
+                            <StyledNavLink>Certificações (Oficiais)</StyledNavLink>
+                        </MenuItem>
                     </Menu>
                 </StyledMobileToolbar>
                 <StyledDesktopToolbar variant="regular">
@@ -97,6 +100,9 @@ export default function Navbar() {
                     </MenuItem>
                     <MenuItem onClick={() => handleSmoothScroll("projects")}>
                         <StyledNavLink>Projetos</StyledNavLink>
+                    </MenuItem>
+                    <MenuItem onClick={() => handleSmoothScroll("certifications")}>
+                        <StyledNavLink>Certificações (Oficiais)</StyledNavLink>
                     </MenuItem>
                 </StyledDesktopToolbar>
             </AppBar>
