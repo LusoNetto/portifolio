@@ -6,6 +6,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import CV from "../../../../assets/pdfs/Open.pdf"
+import { handleEmail } from "../scripts";
 
 const HeroSection: React.FC = () => {
 
@@ -47,15 +48,6 @@ const HeroSection: React.FC = () => {
         document.body.removeChild(link);
     };
 
-    const handleEmail = () => {
-        const emailAddress = 'example@example.com';
-        const subject = 'Subject';
-        const body = 'Hello! I saw your portfolio...';
-
-        const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.open(mailtoLink);
-    }
-
     return (
         <>
             <StyledHero>
@@ -75,14 +67,14 @@ const HeroSection: React.FC = () => {
                             <Typography color="primary.contrastText" variant="h1" pb={2} textAlign="center">
                                 Luciano Junior
                             </Typography>
-                            <Typewriter text="I'm a Software Engineer" delay={120} variant="h2" color="primary.contrastText" />
+                            <Typewriter text="Eu estou Desenvolvedor FullStack" delay={120} variant="h2" color="primary.contrastText" />
                             <Box mt={3}>
                                 <Grid container spacing={3} display="flex" justifyContent="center">
                                     <Grid item xs={10} md={4}>
                                         <StyledButton onClick={() => handleDownload()}>
                                             <DownloadIcon />
                                             <Typography>
-                                                Download CV
+                                                Baixe meu curriculo
                                             </Typography>
                                         </StyledButton>
                                     </Grid>
@@ -90,7 +82,7 @@ const HeroSection: React.FC = () => {
                                         <StyledButton onClick={() => handleEmail()}>
                                             <EmailIcon />
                                             <Typography>
-                                                Contact me
+                                                Entre em contato
                                             </Typography>
                                         </StyledButton>
                                     </Grid>
