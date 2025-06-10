@@ -39,9 +39,22 @@ const AboutSection: React.FC = () => {
                         <AnimationComponent moveDirection="left">
                             <StyledCard variant="outlined">
                                 <SchoolIcon />
-                                <Typography textAlign="center" fontWeight={600}>Educação</Typography>
-                                <Typography textAlign="center">Graduação - UMC</Typography>
+                                <Typography textAlign="center" fontWeight={600}>Graduação</Typography>
+                                <Typography textAlign="center">UMC</Typography>
                                 <Typography textAlign="center">Análise e Desenvolvimento de Sistemas</Typography>
+                                <Typography textAlign="center">Concluida 06/2024</Typography>
+                            </StyledCard>
+                        </AnimationComponent>
+
+                    </Grid>
+                    <Grid item xs={9} md={2.5}>
+                        <AnimationComponent moveDirection="left">
+                            <StyledCard variant="outlined">
+                                <SchoolIcon />
+                                <Typography textAlign="center" fontWeight={600}>Graduação</Typography>
+                                <Typography textAlign="center">Fatec Mogi das Cruzes</Typography>
+                                <Typography textAlign="center">Análise e Desenvolvimento de Sistemas</Typography>
+                                <Typography textAlign="center">Cursando</Typography>
                             </StyledCard>
                         </AnimationComponent>
 
