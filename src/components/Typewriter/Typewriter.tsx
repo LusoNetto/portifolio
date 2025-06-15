@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { TypographyVariant } from "@mui/material/styles/createTypography";
+import { TypographyVariant } from "@mui/material";
 import { useEffect, useState } from "react";
 
 interface TypewriterProps {
