@@ -24,13 +24,8 @@ const ProjectCardReactThreeFiber: React.FC<ProjectCardReactThreeFiberProps> = ({
     }));
 
     const StyledCanvaCard = styled("div")(({ theme }) => ({
-        width: "25vw",
         objectFit: "contain",
-        height: "25vw",
         padding: "10px",
-        [theme.breakpoints.up('md')]: {
-            height: "25vw",
-        },
     }))
 
     return (

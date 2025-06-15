@@ -1,3 +1,6 @@
 #canvas-container > div > canvas {
-  min-height: 500px;
+  min-width: 150px;
+  min-height: 150px;
+  max-width: 25vw;
+  max-height: 25vw;
 }
