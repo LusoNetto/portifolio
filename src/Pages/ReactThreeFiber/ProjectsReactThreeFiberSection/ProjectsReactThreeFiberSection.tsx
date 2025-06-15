@@ -1,7 +1,5 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material";
 import ProjectCardReactThreeFiber from "../../../components/ProjectCardReactThreeFiber/ProjectCardReactThreeFiber";
-import SimpleBoxRotation from "../projects/SimpleCube/SimpleCube";
-import SimpleBoxRotationAndMoving from "../projects/SimpleBoxRotationAndMoving/SimpleBoxRotationAndMoving";
 import SimpleSphere from "../projects/SimpleSphere/SimpleSphere";
 import SimpleTorus from "../projects/SimpleTorus/SimpleTorus";
 import SimpleTorusKnot from "../projects/SimpleTorusKnot/SimpleTorusKnot";
