@@ -63,10 +63,10 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
                 Status: {status}
             </Typography>
             <Grid container spacing={1} pt={2}>
-                <Grid item xs={6}>
+                <Grid size={{xs:6}}>
                     <StyledButton onClick={() => window.open(link)}>Ver certificado</StyledButton>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid size={{xs:6}}>
                     <StyledButton onClick={() => window.open(downloadLink)}>Baixar certificado</StyledButton>
                 </Grid>
             </Grid>

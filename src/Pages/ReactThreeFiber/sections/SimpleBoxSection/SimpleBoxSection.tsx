@@ -1,12 +1,19 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import './styles.css'
+import './styles.css';
 import { useRef } from "react";
+import * as THREE from 'three';
 
 
-const Cube = ({ position, side, color }) => {
-  const ref = useRef();
+type CubeProps = {
+  position: THREE.Vector3 | [number, number, number]
+  side: [number, number, number]
+  color: THREE.Color | string
+}
 
-  useFrame((state, delta) => {
+const Cube = ({ position, side, color }: CubeProps) => {
+  const ref = useRef<THREE.Mesh>(null!);
+
+  useFrame((_, delta) => {
     console.log(ref.current.rotation.x);
     ref.current.rotation.x += delta;
     ref.current.rotation.y += delta;

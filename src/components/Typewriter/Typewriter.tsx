@@ -1,11 +1,11 @@
 import { Typography } from "@mui/material";
-import { Variant } from "@mui/material/styles/createTypography";
+import { TypographyVariant } from "@mui/material/styles/createTypography";
 import { useEffect, useState } from "react";
 
 interface TypewriterProps {
     text: string;
     delay: number;
-    variant?: Variant
+    variant?: TypographyVariant
     color?: string;
 }
 
