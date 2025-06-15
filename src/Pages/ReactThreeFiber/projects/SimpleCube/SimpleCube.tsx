@@ -2,7 +2,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import './styles.css';
 import { useRef, useState } from "react";
 import * as THREE from 'three';
-import { CameraControls, MeshWobbleMaterial, OrbitControls } from '@react-three/drei';
+import { CameraControls } from '@react-three/drei';
 
 type CubeProps = {
   position: THREE.Vector3 | [number, number, number]

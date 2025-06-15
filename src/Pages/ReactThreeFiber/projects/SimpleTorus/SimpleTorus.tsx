@@ -2,7 +2,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import './styles.css';
 import * as THREE from 'three';
 import { useRef, useState } from "react";
-import { CameraControls, MeshWobbleMaterial, OrbitControls } from "@react-three/drei";
+import { MeshWobbleMaterial } from "@react-three/drei";
 
 type SphereProps = {
   position: THREE.Vector3 | [number, number, number]
