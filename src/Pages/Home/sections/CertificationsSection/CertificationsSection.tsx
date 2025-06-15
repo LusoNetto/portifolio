@@ -40,7 +40,7 @@ const CertificationsSection: React.FC = () => {
                 </Box>
                 <Grid container spacing={5} pb={3}>
                     {certifications.map((certification: CertificationCardProps, index: number) => (
-                        <Grid item md={6} key={index}>
+                        <Grid size={{md:6}} key={index}>
                             <AnimationComponent moveDirection={index % 2 == 0 ? "right" : "left"}>
                                 <CertificationCard
                                     credential={certification.credential}
