@@ -1,6 +1,6 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import './styles.css';
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import * as THREE from 'three';
 
 type CubeProps = {
@@ -12,21 +12,32 @@ type CubeProps = {
 const Cube = ({ position, side, color }: CubeProps) => {
   const ref = useRef<THREE.Mesh>(null!);
 
-  useFrame((_, delta) => {
-    console.log(ref.current.rotation.x);
-    ref.current.rotation.x += delta;
-    ref.current.rotation.y += delta;
-    ref.current.rotation.z += delta;
+  const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+
+  useFrame((state, delta) => {
+    const speed = isHovered?0.2:1;
+    ref.current.rotation.x += delta*speed;
+    ref.current.rotation.y += delta*speed;
+    ref.current.rotation.z += delta*speed;
+    ref.current.position.z = Math.sin(state.clock.elapsedTime)
   });
   return (
-    <mesh position={position} ref={ref}>
+    <mesh
+    position={position} 
+    ref={ref}
+    onPointerEnter={()=>setIsHovered(true)}
+    onPointerLeave={()=>setIsHovered(false)}
+    onClick={()=>setIsClicked(!isClicked)}
+    scale={isHovered?1.1:1}
+    >
       <boxGeometry args={side} />
-      <meshStandardMaterial color={color} />
+      <meshStandardMaterial color={isClicked?color:"hotpink"} />
     </mesh>
   );
 }
 
-const SimpleBoxRotation = () => {
+const SimpleCube = () => {
   return (
     <Canvas id="canvas-container">
       <directionalLight position={[0, 0, 2]} intensity={0.5} />
@@ -43,4 +54,4 @@ const SimpleBoxRotation = () => {
   );
 };
 
-export default SimpleBoxRotation;
+export default SimpleCube;

@@ -1,6 +1,11 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material";
 import ProjectCardReactThreeFiber from "../../../components/ProjectCardReactThreeFiber/ProjectCardReactThreeFiber";
-import SimpleBoxRotation from "../projects/SimpleBoxRotation/SimpleBoxRotation";
+import SimpleBoxRotation from "../projects/SimpleCube/SimpleCube";
+import SimpleBoxRotationAndMoving from "../projects/SimpleBoxRotationAndMoving/SimpleBoxRotationAndMoving";
+import SimpleSphere from "../projects/SimpleSphere/SimpleSphere";
+import SimpleTorus from "../projects/SimpleTorus/SimpleTorus";
+import SimpleTorusKnot from "../projects/SimpleTorusKnot/SimpleTorusKnot";
+import SimpleCube from "../projects/SimpleCube/SimpleCube";
 
 
 const ProjectsReactThreeFiberSection = () => {
@@ -15,7 +20,10 @@ const ProjectsReactThreeFiberSection = () => {
           <Typography variant="h2" textAlign="center" color="primary.contrastText">Projetos em React Three Fiber</Typography>
         </Box>
         <Grid container spacing={5} pb={3}>
-          <ProjectCardReactThreeFiber title="Cubo rotacionando" subtitle="Rotaciona em x, y e z" Canvas={SimpleBoxRotation} />
+          <ProjectCardReactThreeFiber title="Cubo" subtitle="Click para mudar de cor (Rotaciona e se movimenta)" Canvas={SimpleCube} />
+          <ProjectCardReactThreeFiber title="Esfera" subtitle="Click para mudar de cor (Rotaciona e se movimenta)" Canvas={SimpleSphere} />
+          <ProjectCardReactThreeFiber title="Torus" subtitle="Click para mudar de cor (Rotaciona e se movimenta)" Canvas={SimpleTorus} />
+          <ProjectCardReactThreeFiber title="Torus Knot" subtitle="Click para mudar de cor (Rotaciona e se movimenta)" Canvas={SimpleTorusKnot} />
         </Grid>
 
       </ Container>
