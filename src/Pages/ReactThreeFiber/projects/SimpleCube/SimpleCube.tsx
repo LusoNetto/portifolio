@@ -2,6 +2,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import './styles.css';
 import { useRef, useState } from "react";
 import * as THREE from 'three';
+import { CameraControls, MeshWobbleMaterial, OrbitControls } from '@react-three/drei';
 
 type CubeProps = {
   position: THREE.Vector3 | [number, number, number]
@@ -24,15 +25,15 @@ const Cube = ({ position, side, color }: CubeProps) => {
   });
   return (
     <mesh
-    position={position} 
-    ref={ref}
-    onPointerEnter={()=>setIsHovered(true)}
-    onPointerLeave={()=>setIsHovered(false)}
-    onClick={()=>setIsClicked(!isClicked)}
-    scale={isHovered?1.1:1}
+      position={position}
+      ref={ref}
+      onPointerEnter={() => setIsHovered(true)}
+      onPointerLeave={() => setIsHovered(false)}
+      onClick={() => setIsClicked(!isClicked)}
+      scale={isHovered ? 1.1 : 1}
     >
       <boxGeometry args={side} />
-      <meshStandardMaterial color={isClicked?color:"hotpink"} />
+      <meshStandardMaterial color={isClicked ? color : "hotpink"} />
     </mesh>
   );
 }
@@ -40,8 +41,8 @@ const Cube = ({ position, side, color }: CubeProps) => {
 const SimpleCube = () => {
   return (
     <Canvas id="canvas-container">
-      <directionalLight position={[0, 0, 2]} intensity={0.5} />
-      <ambientLight intensity={0.1} />
+      <directionalLight position={[1, 1.5, 2]} intensity={0.7} />
+      <ambientLight intensity={0.2} />
       {/* <group position={[0, -1, 0]}>
         <Cube position={[1, 0, 0]} side={[1, 1, 1]} color={"green"} />
         <Cube position={[-1, 0, 0]} side={[1, 1, 1]} color={"red"} />
@@ -50,6 +51,7 @@ const SimpleCube = () => {
         </group> */}
 
       <Cube position={[0, 0, 0]} side={[3, 3, 3]} color={"blue"} />
+      <CameraControls/>
     </Canvas>
   );
 };

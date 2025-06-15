@@ -2,6 +2,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import './styles.css';
 import * as THREE from 'three';
 import { useRef, useState } from "react";
+import { CameraControls, MeshWobbleMaterial, OrbitControls } from "@react-three/drei";
 
 type SphereProps = {
   position: THREE.Vector3 | [number, number, number]
@@ -20,7 +21,7 @@ const Torus = ({ position, size, color }: SphereProps) => {
     ref.current.rotation.x += delta*speed;
     ref.current.rotation.y += delta*speed;
     ref.current.rotation.z += delta*speed;
-    ref.current.position.z = Math.sin(state.clock.elapsedTime)-11
+    ref.current.position.z = Math.sin(state.clock.elapsedTime)-20
   });
   return (
     <mesh
@@ -32,7 +33,7 @@ const Torus = ({ position, size, color }: SphereProps) => {
     scale={isHovered?1.1:1}
     >
       <torusGeometry args={size} />
-      <meshStandardMaterial color={isClicked?"blue":color} />
+      <MeshWobbleMaterial factor={0.1} speed={10} color={isClicked?"blue":color}/>
     </mesh>
   )
 }

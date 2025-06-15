@@ -2,6 +2,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import './styles.css';
 import * as THREE from 'three';
 import { useRef, useState } from "react";
+import { CameraControls, OrbitControls } from "@react-three/drei";
 
 type SphereProps = {
   position: THREE.Vector3 | [number, number, number]
@@ -43,6 +44,7 @@ const SimpleSphere = () => {
       <directionalLight position={[2, 2, 2]} intensity={1} />
       <ambientLight intensity={0.3} />
       <Sphere position={[0, 0, 0]} size={[2.4, 30, 30]} color={"lightblue"} />
+      <CameraControls/>
     </Canvas>
   );
 };

@@ -20,8 +20,8 @@ const ProjectsReactThreeFiberSection = () => {
         <Grid container spacing={5} pb={3}>
           <ProjectCardReactThreeFiber title="Cubo" subtitle="Click para mudar de cor (Rotaciona e se movimenta)" Canvas={SimpleCube} />
           <ProjectCardReactThreeFiber title="Esfera" subtitle="Click para mudar de cor (Rotaciona e se movimenta)" Canvas={SimpleSphere} />
-          <ProjectCardReactThreeFiber title="Torus" subtitle="Click para mudar de cor (Rotaciona e se movimenta)" Canvas={SimpleTorus} />
-          <ProjectCardReactThreeFiber title="Torus Knot" subtitle="Click para mudar de cor (Rotaciona e se movimenta)" Canvas={SimpleTorusKnot} />
+          <ProjectCardReactThreeFiber title="Torus" subtitle="Click para mudar de cor (Rotaciona e se movimenta sozinha)" Canvas={SimpleTorus} />
+          <ProjectCardReactThreeFiber title="Torus Knot" subtitle="Click para mudar de cor (Rotaciona e se movimenta sozinha)" Canvas={SimpleTorusKnot} />
         </Grid>
 
       </ Container>
