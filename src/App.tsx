@@ -5,7 +5,7 @@ import ProjectsSection from "./Pages/Home/sections/ProjectsSection/ProjectsSecti
 import CertificationSection from "./Pages/Home/sections/CertificationsSection/CertificationsSection"
 import Footer from "./components/Footer/Footer"
 import { Route, Routes } from "react-router"
-import SimpleBoxSection from "./Pages/ReactThreeFiber/sections/SimpleBoxSection/SimpleBoxSection"
+import ProjectsReactThreeFiberSection from "./Pages/ReactThreeFiber/ProjectsReactThreeFiberSection/ProjectsReactThreeFiberSection"
 
 const App: React.FC = () => {
 
@@ -17,13 +17,9 @@ const App: React.FC = () => {
           <HeroSection />
           <AboutSection />
           <ProjectsSection />
+          <ProjectsReactThreeFiberSection />
           <CertificationSection />
           <Footer />
-        </>
-      } />
-      <Route path="/portifolio/react-fiber-three" element={
-        <>
-          <SimpleBoxSection />
         </>
       } />
     </Routes>

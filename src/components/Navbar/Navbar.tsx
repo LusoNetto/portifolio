@@ -89,6 +89,9 @@ export default function Navbar() {
                         <MenuItem onClick={() => handleSmoothScroll("certifications")}>
                             <StyledNavLink>Certificações (Oficiais)</StyledNavLink>
                         </MenuItem>
+                        <MenuItem onClick={() => handleSmoothScroll("react-three-fiber-projects")}>
+                            <StyledNavLink>Projetos em React Three Fiber</StyledNavLink>
+                        </MenuItem>
                     </Menu>
                 </StyledMobileToolbar>
                 <StyledDesktopToolbar variant="regular">
@@ -103,6 +106,9 @@ export default function Navbar() {
                     </MenuItem>
                     <MenuItem onClick={() => handleSmoothScroll("certifications")}>
                         <StyledNavLink>Certificações (Oficiais)</StyledNavLink>
+                    </MenuItem>
+                    <MenuItem onClick={() => handleSmoothScroll("react-three-fiber-projects")}>
+                        <StyledNavLink>Projetos em React Three Fiber</StyledNavLink>
                     </MenuItem>
                 </StyledDesktopToolbar>
             </AppBar>

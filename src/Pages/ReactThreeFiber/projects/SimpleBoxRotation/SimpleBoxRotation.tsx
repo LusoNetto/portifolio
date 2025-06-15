@@ -3,7 +3,6 @@ import './styles.css';
 import { useRef } from "react";
 import * as THREE from 'three';
 
-
 type CubeProps = {
   position: THREE.Vector3 | [number, number, number]
   side: [number, number, number]
@@ -27,9 +26,9 @@ const Cube = ({ position, side, color }: CubeProps) => {
   );
 }
 
-const Test = () => {
+const SimpleBoxRotation = () => {
   return (
-    <Canvas id="container">
+    <Canvas id="canvas-container">
       <directionalLight position={[0, 0, 2]} intensity={0.5} />
       <ambientLight intensity={0.1} />
       {/* <group position={[0, -1, 0]}>
@@ -37,11 +36,11 @@ const Test = () => {
         <Cube position={[-1, 0, 0]} side={[1, 1, 1]} color={"red"} />
         <Cube position={[1, 2, 0]} side={[1, 1, 1]} color={"hotpink"} />
         <Cube position={[-1, 2, 0]} side={[1, 1, 1]} color={"blue"} />
-      </group> */}
+        </group> */}
 
-      <Cube position={[0, 0, 0]} side={[1, 1, 1]} color={"light-green"} />
+      <Cube position={[0, 0, 0]} side={[1, 1, 1]} color={"blue"} />
     </Canvas>
   );
 };
 
-export default Test;
+export default SimpleBoxRotation;
