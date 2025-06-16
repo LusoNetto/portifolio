@@ -3,6 +3,7 @@ import './styles.css';
 import { useRef, useState } from "react";
 import * as THREE from 'three';
 import { CameraControls } from '@react-three/drei';
+import { useControls } from "leva";
 
 type CubeProps = {
   position: THREE.Vector3 | [number, number, number]
@@ -12,6 +13,20 @@ type CubeProps = {
 
 const Cube = ({ position, side, color }: CubeProps) => {
   const ref = useRef<THREE.Mesh>(null!);
+  const directionalLigthRef = useRef<THREE.DirectionalLight>(null!);
+
+  const {ligthColor, ligthIntensity} = useControls(
+    {
+      ligthColor: "white",
+      ligthIntensity: {
+        value: 0.5,
+        max: 5,
+        min: 0
+      }
+      
+    }
+  );
+  
 
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -32,6 +47,12 @@ const Cube = ({ position, side, color }: CubeProps) => {
       onClick={() => setIsClicked(!isClicked)}
       scale={isHovered ? 1.1 : 1}
     >
+      <directionalLight
+        position={[1, 1.5, 2]}
+        intensity={ligthIntensity}
+        ref={directionalLigthRef}
+        color={ligthColor}
+      />
       <boxGeometry args={side} />
       <meshStandardMaterial color={isClicked ? color : "hotpink"} />
     </mesh>
@@ -41,7 +62,6 @@ const Cube = ({ position, side, color }: CubeProps) => {
 const SimpleCube = () => {
   return (
     <Canvas id="canvas-container">
-      <directionalLight position={[1, 1.5, 2]} intensity={0.7} />
       <ambientLight intensity={0.2} />
       {/* <group position={[0, -1, 0]}>
         <Cube position={[1, 0, 0]} side={[1, 1, 1]} color={"green"} />
