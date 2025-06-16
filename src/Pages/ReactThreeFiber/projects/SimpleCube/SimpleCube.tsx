@@ -54,7 +54,7 @@ const Cube = ({ position, side, color }: CubeProps) => {
         color={ligthColor}
       />
       <boxGeometry args={side} />
-      <meshStandardMaterial color={isClicked ? color : "hotpink"} />
+      <meshStandardMaterial color={isClicked ? "hotpink" : color} />
     </mesh>
   );
 }
