@@ -70,7 +70,7 @@ const SimpleCube = () => {
         <Cube position={[-1, 2, 0]} side={[1, 1, 1]} color={"blue"} />
         </group> */}
 
-      <Cube position={[0, 0, 0]} side={[3, 3, 3]} color={"blue"} />
+      <Cube position={[0, 0, 0]} side={[3, 3, 3]} color={"white"} />
       <CameraControls/>
     </Canvas>
   );

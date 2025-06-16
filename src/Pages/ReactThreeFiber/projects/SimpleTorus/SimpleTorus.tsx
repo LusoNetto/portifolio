@@ -51,7 +51,7 @@ const SimpleTorus = () => {
   return (
     <Canvas id="canvas-container">
       <ambientLight intensity={0.7} />
-      <Torus position={[0, 0, -10]} size={[5, 2, 10]} color={"yellow"} />
+      <Torus position={[0, 0, -10]} size={[5, 2, 10]} color={"white"} />
     </Canvas>
   );
 };

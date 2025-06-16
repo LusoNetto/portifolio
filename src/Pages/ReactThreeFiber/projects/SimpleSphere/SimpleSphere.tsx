@@ -57,7 +57,7 @@ const SimpleSphere = () => {
   return (
     <Canvas id="canvas-container" >
       <ambientLight intensity={0.3} />
-      <Sphere position={[0, 0, 0]} size={[2.4, 30, 30]} color={"lightblue"} />
+      <Sphere position={[0, 0, 0]} size={[2.4, 30, 30]} color={"white"} />
       <CameraControls />
     </Canvas>
   );

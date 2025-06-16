@@ -61,7 +61,7 @@ const SimpleTorusKnot = () => {
   return (
     <Canvas id="canvas-container">
       <ambientLight intensity={0.7} />
-      <TorusKnot position={[0, 0, -10]} size={[5, 2, 1000]} color={"purple"} />
+      <TorusKnot position={[0, 0, -10]} size={[5, 2, 1000]} color={"white"} />
     </Canvas>
   );
 };
