@@ -1,9 +1,20 @@
-import { CameraControls } from '@react-three/drei';
+import { Dispatch, SetStateAction, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber'
-import './styles.css';
+import { CameraControls } from '@react-three/drei';
 import { useGLTF } from '@react-three/drei'
-import { useRef, useState } from 'react';
+import { GLTF } from "three-stdlib";
+import { Vector3 } from 'three';
 import * as THREE from 'three';
+import './styles.css';
+
+type GLTFResult = GLTF & {
+  nodes: {
+	[key : string] : THREE.Mesh;
+  };
+  materials: {
+    [key: string]: THREE.MeshStandardMaterial;
+  };
+};
 
 export function Pedal() {
   const ref = useRef<THREE.Mesh>(null!);
@@ -11,7 +22,7 @@ export function Pedal() {
   const [isClicked, setIsClicked] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
-  const [buttonPosition, setButtonPosition] = useState([-0.04, 0.027, 0]);
+  const [buttonPosition, setButtonPosition] = useState([-0.04, 0.027, 0]) as unknown as [Vector3, Dispatch<SetStateAction<number[]>>];
   const [materialLigth, setMaterialLigth] = useState("Material.PowerOffLigth");
   const [powerLigthIntensity, setPowerLigthIntensity] = useState(0);
 
@@ -39,7 +50,7 @@ export function Pedal() {
     }, 500)
   }
 
-  const { nodes, materials } = useGLTF('portifolio/public/models/pedalReverbMVAVE.gltf')
+  const { nodes, materials } = useGLTF('portifolio/public/models/pedalReverbMVAVE.gltf') as unknown as GLTFResult;
   return (
     <group dispose={null} scale={35} rotation={[0.6, 1.8, 0.4]} ref={ref} onPointerEnter={() => setIsHovered(true)} onPointerLeave={() => setIsHovered(false)}>
       <group name="Scene">
