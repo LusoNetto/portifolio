@@ -523,7 +523,7 @@ export function Pedal() {
   )
 }
 
-useGLTF.preload('public/model/pedalReverbMVAVE.gltf')
+useGLTF.preload('portifolio/public/models/pedalReverbMVAVE.gltf')
 
 const PedalReverbMVAVE = () => {
   return (
