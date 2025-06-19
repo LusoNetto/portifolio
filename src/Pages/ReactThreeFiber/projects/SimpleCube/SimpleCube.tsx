@@ -11,7 +11,7 @@ type CubeProps = {
   color: THREE.Color | string
 }
 
-const Cube = ({ position, side, color }: CubeProps) => {
+export const Cube = ({ position, side, color }: CubeProps) => {
   const ref = useRef<THREE.Mesh>(null!);
   const directionalLigthRef = useRef<THREE.DirectionalLight>(null!);
 

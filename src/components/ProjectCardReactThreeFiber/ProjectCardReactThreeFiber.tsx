@@ -16,15 +16,10 @@ const ProjectCardReactThreeFiber: React.FC<ProjectCardReactThreeFiberProps> = ({
     const StyledCanvaCard = styled("div")(({ theme }) => ({
         borderRadius: "3px",
         border: `0.5px solid  ${theme.palette.primary.contrastText}`,
-        backgroundColor: "transparent",
         color: theme.palette.primary.contrastText,
         width: "30%",
         height: "100%",
         padding: "20px",
-        '&:hover': {
-            backgroundColor: theme.palette.primary.light
-        },
-        outline: "red 1px solid",
         [theme.breakpoints.down(1025)]: {
             width: "100%",
         },

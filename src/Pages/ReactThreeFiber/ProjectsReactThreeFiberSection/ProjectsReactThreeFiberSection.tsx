@@ -4,6 +4,8 @@ import SimpleSphere from "../projects/SimpleSphere/SimpleSphere";
 import SimpleTorus from "../projects/SimpleTorus/SimpleTorus";
 import SimpleTorusKnot from "../projects/SimpleTorusKnot/SimpleTorusKnot";
 import SimpleCube from "../projects/SimpleCube/SimpleCube";
+import PedalReverbMVAVE from "../projects/PedalReverbMVAVE/PedalReverbMVAVE";
+import ProjectBigCardReactThreeFiber from "../../../components/ProjectBigCardReactThreeFiber/ProjectBigCardReactThreeFiber";
 
 
 const ProjectsReactThreeFiberSection = () => {
@@ -22,8 +24,8 @@ const ProjectsReactThreeFiberSection = () => {
           <ProjectCardReactThreeFiber title="Esfera" subtitle="Click para mudar de cor (Rotaciona e se movimenta)" Canvas={SimpleSphere} />
           <ProjectCardReactThreeFiber title="Torus" subtitle="Click para mudar de cor (Rotaciona e se movimenta sozinha)" Canvas={SimpleTorus} />
           <ProjectCardReactThreeFiber title="Torus Knot" subtitle="Click para mudar de cor (Rotaciona e se movimenta sozinha)" Canvas={SimpleTorusKnot} />
+          <ProjectBigCardReactThreeFiber title="Pedal de Reverb M-VAVE" subtitle="(Liga e desliga luz, Rotaciona e se movimenta)" Canvas={PedalReverbMVAVE} />
         </Grid>
-
       </ Container>
     </ StyledExperience>
 
