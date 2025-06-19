@@ -50,7 +50,7 @@ export function Pedal() {
     }, 500)
   }
 
-  const { nodes, materials } = useGLTF('public/models/pedalReverbMVAVE.gltf') as unknown as GLTFResult;
+  const { nodes, materials } = useGLTF('models/pedalReverbMVAVE.gltf') as unknown as GLTFResult;
   return (
     <group dispose={null} scale={35} rotation={[0.6, 1.8, 0.4]} ref={ref} onPointerEnter={() => setIsHovered(true)} onPointerLeave={() => setIsHovered(false)}>
       <group name="Scene">
@@ -523,7 +523,7 @@ export function Pedal() {
   )
 }
 
-useGLTF.preload('public/models/pedalReverbMVAVE.gltf')
+useGLTF.preload('models/pedalReverbMVAVE.gltf')
 
 const PedalReverbMVAVE = () => {
   return (
