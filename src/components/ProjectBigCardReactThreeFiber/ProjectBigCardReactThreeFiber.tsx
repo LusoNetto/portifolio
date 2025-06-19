@@ -21,9 +21,6 @@ const ProjectBigCardReactThreeFiber: React.FC<ProjectCardReactThreeFiberProps> =
         width: "100%",
         height: "100%",
         padding: "20px",
-        '&:hover': {
-            backgroundColor: theme.palette.primary.light
-        },
     }));
 
     return (

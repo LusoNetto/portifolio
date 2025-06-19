@@ -9,17 +9,19 @@ export function Pedal() {
   const ref = useRef<THREE.Mesh>(null!);
 
   const [isClicked, setIsClicked] = useState(false);
-  const [isHovered, setIsHovered] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   const [buttonPosition, setButtonPosition] = useState([-0.04, 0.027, 0]);
   const [materialLigth, setMaterialLigth] = useState("Material.PowerOffLigth");
   const [powerLigthIntensity, setPowerLigthIntensity] = useState(0);
 
   useFrame((state, delta) => {
-    ref.current.rotation.x += (delta + Math.sin(state.clock.elapsedTime))/2000;
-    ref.current.rotation.y += (delta + Math.sin(state.clock.elapsedTime))/2000;
-    ref.current.rotation.z += (delta + Math.sin(state.clock.elapsedTime))/2000;
-    ref.current.position.z = Math.sin(state.clock.elapsedTime)/10
+    if(!isHovered){
+      ref.current.rotation.x += (delta + Math.sin(state.clock.elapsedTime))/2000;
+      ref.current.rotation.y += (delta + Math.sin(state.clock.elapsedTime))/2000;
+      ref.current.rotation.z += (delta + Math.sin(state.clock.elapsedTime))/2000;
+      ref.current.position.z = Math.sin(state.clock.elapsedTime)/10
+    }
   });
 
   const switchPowerPedal = () => {
@@ -31,7 +33,7 @@ export function Pedal() {
       setPowerLigthIntensity(0)
     }
     setIsClicked(!isClicked);
-    setButtonPosition([-0.04, 0.024, 0]);
+    setButtonPosition([-0.04, 0.023, 0]);
     setTimeout(() => {
       setButtonPosition([-0.04, 0.027, 0]);
     }, 500)
@@ -39,7 +41,7 @@ export function Pedal() {
 
   const { nodes, materials } = useGLTF('portifolio/public/models/pedalReverbMVAVE.gltf')
   return (
-    <group dispose={null} scale={35} rotation={[0.6, 1.8, 0.4]} ref={ref}>
+    <group dispose={null} scale={35} rotation={[0.6, 1.8, 0.4]} ref={ref} onPointerEnter={() => setIsHovered(true)} onPointerLeave={() => setIsHovered(false)}>
       <group name="Scene">
         <group name="AmbientLight" position={[0, 0.043, 0]} />
         <directionalLight
@@ -74,7 +76,7 @@ export function Pedal() {
               geometry={nodes.Cylinder007.geometry}
               material={materials['Material.015']}
               position={[-0.04, 0.013, 0]}
-              scale={[0.01, 0, 0.01]}
+              scale={[0.01, 0.0005, 0.01]}
             />
             <mesh
               name="CabecaBotao"
@@ -91,7 +93,7 @@ export function Pedal() {
               receiveShadow
               geometry={nodes.Cylinder010.geometry}
               material={materials['Material.006']}
-              position={[-0.04, 0.023, 0]}
+              position={[-0.04, 0.022, 0]}
               scale={[0.007, 0.01, 0.007]}
             />
             <mesh
@@ -111,7 +113,7 @@ export function Pedal() {
               geometry={nodes.Cylinder012.geometry}
               material={materials['Material.027']}
               position={[-0.04, 0.014, 0]}
-              scale={[0.009, 0.001, 0.007]}
+              scale={[0.009, 0.001, 0.009]}
             />
           </group>
           <mesh
